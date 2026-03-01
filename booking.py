@@ -165,5 +165,18 @@ print("\n--- สถานะเริ่มต้น ---")
 print(room101)
 print(room102)
 
-book_Alice_1 = Student1.book_room(room101, "2026-10-01", "10:00")  # ✅ เปลี่ยนเป็น book_room
-book_Bob_1 = Student2.book_room(room102, "2026-10-01", "10:00")  
+book_Alice_1 = Student1.book_room(room101, "2026-10-01", "10:00")
+if book_Alice_1:
+    Student1.view_bookings()
+    room101.schedule.get_all_bookings()
+
+book_Bob_1 = Student2.book_room(room101, "2026-10-01", "10:00")
+if book_Bob_1:
+    Student1.view_bookings()
+    room101.schedule.get_all_bookings()
+
+
+book_Bob_1 = Student2.book_room(room102, "2026-10-01", "10:00")
+if book_Bob_1:
+    Student1.view_bookings()
+    room102.schedule.get_all_bookings()
